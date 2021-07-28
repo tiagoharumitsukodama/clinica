@@ -10,7 +10,7 @@ const StyledScreenFooter = Styled.div`
     justify-content: space-between;
     width: 100%;
     min-height: 100vh;
-    background: #215413;
+    background: #044700;
     padding: 5rem 0;
 
     img {

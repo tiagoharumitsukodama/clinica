@@ -22,12 +22,12 @@ const StyledInput = Styled.div`
     width: 80%;
     max-width: 600px;
     background: white;
-    border: 1px solid gray;
+    border: 1px solid white;
 
     button {
-        border: transparent;
+        border: none;
         background: #26733a;
-        padding: 0 15px;
+        padding: 0 10px;
         font-weight: 700;
         color: white;
         height: 100%;
@@ -41,7 +41,7 @@ const StyledInput = Styled.div`
 
     input:focus
     {
-        border: transparent;
+        border: none;
         outline-offset: 0px;
         outline: none;
     }
@@ -52,7 +52,9 @@ class ScreenSearch extends React.Component{
         return (
             <StyledScreenSearch>
                 <StyledInput>
-                    <input />
+                    <input 
+                        placeholder='Digite o que procura'
+                    />
                     <button>Buscar</button>
                 </StyledInput>
             </StyledScreenSearch>
