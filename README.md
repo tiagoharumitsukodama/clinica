@@ -3,14 +3,12 @@
 ## Available Scripts
 
 Para iniciar
-
-### `npm start`
+`npm start`
 
 Abra [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
 Para criar a aplicação
-
-### `npm run build`
+`npm run build`
 
 ## Mock de design
 
