@@ -2,6 +2,8 @@ import React from 'react'
 import Styled from 'styled-components'
 import BackgroundImage from './Images/background_services.svg'
 
+import servicesList from './Services'
+
 const StyledScreenServices = Styled.div`
     display: flex;
     flex-direction: column;
@@ -50,48 +52,29 @@ class ScreenServices extends React.Component{
         return (
             <StyledScreenServices>
                 <h2>
-                    Services
+                    Tratamentos
                 </h2>
                 <StyledContainerCards>
-                <StyledCard>
-                    <h3>
-                        Tipo A
-                    </h3>
-                    <ul>
-                        <li>tipo 1</li>
-                        <li>tipo 2</li>
-                        <li>tipo 3</li>
-                        <li>tipo 4</li>
-                        <li>tipo 5</li>
-                        <li>tipo 6</li>
-                    </ul>
-                </StyledCard>
-                <StyledCard>
-                    <h3>
-                        Tipo A
-                    </h3>
-                    <ul>
-                        <li>tipo 1</li>
-                        <li>tipo 2</li>
-                        <li>tipo 3</li>
-                        <li>tipo 4</li>
-                        <li>tipo 5</li>
-                        <li>tipo 6</li>
-                    </ul>
-                </StyledCard>
-                <StyledCard>
-                    <h3>
-                        Tipo A
-                    </h3>
-                    <ul>
-                        <li>tipo 1</li>
-                        <li>tipo 2</li>
-                        <li>tipo 3</li>
-                        <li>tipo 4</li>
-                        <li>tipo 5</li>
-                        <li>tipo 6</li>
-                    </ul>
-                </StyledCard>
+                    {
+                        servicesList &&
+                        servicesList.map((service, index) => {
+                            return (
+                                <StyledCard key={index}>
+                                    <h3>
+                                        {service.title}
+                                    </h3>
+                                    <ul>
+                                        {
+                                            service.items &&
+                                            service.items.map((item, index) => {
+                                                return <li key={index}>{item}</li>
+                                            })
+                                        }
+                                    </ul>
+                                </StyledCard>
+                            );
+                        })
+                    }
                 </StyledContainerCards>
             </StyledScreenServices>
         );

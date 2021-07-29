@@ -1,6 +1,8 @@
 import React from 'react'
 import Styled from 'styled-components'
 
+import faqList from './FAQ'
+
 const StyledScreenFAQ = Styled.div`
     display: flex;
     flex-direction: column;
@@ -33,6 +35,7 @@ const StyledCard = Styled.div`
     div {
         width: 100%;
         max-width: 300px;
+        min-height: 150px;
         padding: 10px;
     }
 
@@ -45,55 +48,25 @@ class ScreenFAQ extends React.Component{
     render(){
         return (
             <StyledScreenFAQ>
-                <h2>Frequetly-Asked Questions</h2>
-                <StyledCard className='StyledCard'>
-                    <img alt='imagem' src='https://imagens.brasil.elpais.com/resizer/_i3ZeaxfM8PDGh3XEGviQmTWbKc=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/GI3PMQY6R6G2FUUFOUP4WP4KDE.jpg' />
-                    <div>
-                        <h3>
-                            Card de Pergunta?
-                        </h3>
-                        <p>
-                            It has survived not only five centuries, but also the leap into electron
-                         ic typesetting, remaining essentially unchanged. It was popularised in the 1960s wit
-                        </p>
-                    </div>
-                </StyledCard>
-                <StyledCard className='StyledCard'>
-                    <img alt='imagem' src='https://imagens.brasil.elpais.com/resizer/_i3ZeaxfM8PDGh3XEGviQmTWbKc=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/GI3PMQY6R6G2FUUFOUP4WP4KDE.jpg' />
-                    <div>
-                        <h3>
-                            Card de Pergunta?
-                        </h3>
-                        <p>
-                            It has survived not only five centuries, but also the leap into electron
-                         ic typesetting, remaining essentially unchanged. It was popularised in the 1960s wit
-                        </p>
-                    </div>
-                </StyledCard>
-                <StyledCard className='StyledCard'>
-                    <img alt='imagem' src='https://imagens.brasil.elpais.com/resizer/_i3ZeaxfM8PDGh3XEGviQmTWbKc=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/GI3PMQY6R6G2FUUFOUP4WP4KDE.jpg' />
-                    <div>
-                        <h3>
-                            Card de Pergunta?
-                        </h3>
-                        <p>
-                            It has survived not only five centuries, but also the leap into electron
-                         ic typesetting, remaining essentially unchanged. It was popularised in the 1960s wit
-                        </p>
-                    </div>
-                </StyledCard>
-                <StyledCard className='StyledCard'>
-                    <img alt='imagem' src='https://imagens.brasil.elpais.com/resizer/_i3ZeaxfM8PDGh3XEGviQmTWbKc=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/GI3PMQY6R6G2FUUFOUP4WP4KDE.jpg' />
-                    <div>
-                        <h3>
-                            Card de Pergunta?
-                        </h3>
-                        <p>
-                            It has survived not only five centuries, but also the leap into electron
-                         ic typesetting, remaining essentially unchanged. It was popularised in the 1960s wit
-                        </p>
-                    </div>
-                </StyledCard>
+                <h2>Perguntas frequêntes</h2>
+                {
+                    faqList &&
+                    faqList.map((question, index) => {
+                        return (
+                            <StyledCard className='StyledCard' key={index}>
+                                <img alt='imagem' src={question.img} />
+                                <div>
+                                    <h3>
+                                        {question.title}
+                                    </h3>
+                                    <p>
+                                        {question.question}
+                                    </p>
+                                </div>
+                            </StyledCard>
+                        );
+                    })
+                }
             </StyledScreenFAQ>
         );
     }

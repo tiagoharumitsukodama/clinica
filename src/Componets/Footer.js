@@ -55,41 +55,35 @@ class Footer extends React.Component{
                 <StyledContainerCards>
                 <StyledCard>
                     <h3>
-                        Tipo A
+                        Tratamentos
                     </h3>
                     <ul>
-                        <li>tipo 1</li>
-                        <li>tipo 2</li>
-                        <li>tipo 3</li>
-                        <li>tipo 4</li>
-                        <li>tipo 5</li>
-                        <li>tipo 6</li>
+                        <li>Tratamento 1</li>
+                        <li>Tratamento 2</li>
+                        <li>Tratamento 3</li>
+                        <li>Tratamento 4</li>
                     </ul>
                 </StyledCard>
                 <StyledCard>
                     <h3>
-                        Tipo A
+                        Coworking
                     </h3>
                     <ul>
-                        <li>tipo 1</li>
-                        <li>tipo 2</li>
-                        <li>tipo 3</li>
-                        <li>tipo 4</li>
-                        <li>tipo 5</li>
-                        <li>tipo 6</li>
+                        <li>Tópico 1</li>
+                        <li>Tópico 2</li>
+                        <li>Tópico 3</li>
                     </ul>
                 </StyledCard>
                 <StyledCard>
                     <h3>
-                        Tipo A
+                        Contato
                     </h3>
                     <ul>
-                        <li>tipo 1</li>
-                        <li>tipo 2</li>
-                        <li>tipo 3</li>
-                        <li>tipo 4</li>
-                        <li>tipo 5</li>
-                        <li>tipo 6</li>
+                        <li>Localização 1</li>
+                        <li>Telefone 2</li>
+                        <li>Email 3</li>
+                        <li>Localização 4</li>
+                        <li>Como chegar 5</li>
                     </ul>
                 </StyledCard>
                 </StyledContainerCards>
